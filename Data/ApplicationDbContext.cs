@@ -15,6 +15,7 @@ namespace PEADotNetTraining.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.UseCollation("THAI_CI_AS");
             base.OnModelCreating(builder);
         }
 

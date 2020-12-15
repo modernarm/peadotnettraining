@@ -1,7 +1,62 @@
-﻿
+﻿@model IEnumerable<Category>
 @{
     ViewData["Title"] = "ประเภทสินค้า";
 }
+@if (TempData["feedback"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@TempData["feedback"]</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
 
-<h1>Index</h1>
-
+<div class="text-left">
+    <a class="btn btn-primary mb-2" asp-action="CreateCategory">
+        เพิ่มข้อมูลประเภทสินค้า
+    </a>
+</div>
+<div class="text-center">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(x => x.CategoryId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(x => x.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(x => x.IsActive)
+                </th>
+                <th>
+                    เครื่องมือ
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.CategoryId
+                    </td>
+                    <td>
+                        @item.CategoryName
+                    </td>
+                    <td>
+                        <input class="form-check-input" type="checkbox" asp-for="@item.IsActive" disabled>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" asp-action="DeleteCategory" asp-route-id="@item.CategoryId" onclick="return confirm('แน่ใจว่าต้องการลบข้อมูลนี้ @item.CategoryName ?'); ">ลบ</a>
+                        <a class="btn btn-info">แก้ไข</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="text-left">
+    <h5>จำนวนประเภทสินค้าที่มีทั้งหมด : @ViewBag.count</h5>
+</div>
