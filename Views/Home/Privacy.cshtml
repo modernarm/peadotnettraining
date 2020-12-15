@@ -1,0 +1,14 @@
+﻿@*@model CustomerViewModel*@
+@{
+    ViewData["Title"] = "Privacy Policy";
+    CustomerViewModel customer = (CustomerViewModel) ViewData["Customer"];
+}
+<h1>@ViewData["Title"]</h1>
+
+<h2>Fullname : @Model.fullName</h2>
+<h2>PostCode : @Model.postCode</h2>
+
+    @customer.fullName
+    @customer.postCode
+<script>
+</script>
