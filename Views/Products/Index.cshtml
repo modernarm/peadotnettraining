@@ -1,6 +1,7 @@
-﻿@model IEnumerable<PEADotNetTraining.Models.Product>
+﻿@model IEnumerable<Product>
 
 @{
+    string[] noImg = { "no", "no1", "no3", "no4", "no5" };
     ViewData["Title"] = "Index";
 }
 
@@ -40,7 +41,10 @@
                 @Html.DisplayFor(modelItem => item.ProductPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ProductImage)
+               @{
+                   string random = noImg[new Random().Next(0, noImg.Length)];
+                   string imgName = !String.IsNullOrEmpty(item.ProductImage) ? item.ProductImage : $"{random}.gif"; }
+               <img src="~/upload/@imgName" width="100" class="img-fluid"/>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ProductExpire)
