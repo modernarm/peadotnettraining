@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PEADotNetTraining.Services;
+using ReflectionIT.Mvc.Paging;
+
 namespace PEADotNetTraining
 {
     public class Startup
@@ -38,6 +40,11 @@ namespace PEADotNetTraining
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+            services.AddPaging(options =>
+            {
+                options.ViewName = "Bootstrap4";
+                options.PageParameterName = "pageIndex";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -40,8 +40,15 @@ using PEADotNetTraining.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\PTN\source\repos\PEADotNetTrainingSolution\PEADotNetTraining\Views\_ViewImports.cshtml"
+using ReflectionIT.Mvc.Paging;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7f2186aacb2ff03049b5c0040ad37e639ca94903", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1217bc694fdf518ea2df87be20a8286ba23e960e", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

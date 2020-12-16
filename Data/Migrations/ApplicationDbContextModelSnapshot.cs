@@ -228,6 +228,7 @@ namespace PEADotNetTraining.Data.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("CategoryName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
@@ -236,6 +237,36 @@ namespace PEADotNetTraining.Data.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("category");
+                });
+
+            modelBuilder.Entity("PEADotNetTraining.Models.Product", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ProductExpire")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("ProductImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("ProductPrice")
+                        .HasColumnType("decimal(10,2)");
+
+                    b.HasKey("ProductId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -287,6 +318,17 @@ namespace PEADotNetTraining.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("PEADotNetTraining.Models.Product", b =>
+                {
+                    b.HasOne("PEADotNetTraining.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

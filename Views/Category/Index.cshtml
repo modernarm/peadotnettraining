@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Category>
+﻿@model PagingList<Category>
 @{
     ViewData["Title"] = "ประเภทสินค้า";
 }
@@ -12,8 +12,12 @@
     </div>
 }
 
-<div class="text-left">
-    <a class="btn btn-primary mb-2" asp-action="CreateCategory">
+<div class="d-flex justify-content-between mb-2">
+    <form method="get" class="form-inline">
+        <input type="text" class="form-control" value="@Model.RouteValue["filter"]" name="filter" />
+        <button type="submit" class="btn btn-success ml-2">ค้นหา</button>
+    </form>
+    <a class="btn btn-primary" asp-action="CreateCategory">
         เพิ่มข้อมูลประเภทสินค้า
     </a>
 </div>
@@ -22,13 +26,13 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(x => x.CategoryId)
+                    @Html.SortableHeaderFor(model => model.CategoryId, "CategoryId")
                 </th>
                 <th>
-                    @Html.DisplayNameFor(x => x.CategoryName)
+                    @Html.SortableHeaderFor(model => model.CategoryName, "CategoryName")
                 </th>
                 <th>
-                    @Html.DisplayNameFor(x => x.IsActive)
+                    @Html.DisplayNameFor(model => model.IsActive)
                 </th>
                 <th>
                     เครื่องมือ
@@ -50,13 +54,16 @@
                     </td>
                     <td>
                         <a class="btn btn-danger" asp-action="DeleteCategory" asp-route-id="@item.CategoryId" onclick="return confirm('แน่ใจว่าต้องการลบข้อมูลนี้ @item.CategoryName ?'); ">ลบ</a>
-                        <a class="btn btn-info">แก้ไข</a>
+                        <a class="btn btn-info" asp-action="UpdateCategory" asp-route-id="@item.CategoryId">แก้ไข</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
+<nav aria-label="Products navigation example">
+    <vc:pager paging-list="@Model" />
+</nav>
 <div class="text-left">
-    <h5>จำนวนประเภทสินค้าที่มีทั้งหมด : @ViewBag.count</h5>
+    <h5>จำนวนประเภทสินค้าที่มีทั้งหมด : @Model.TotalRecordCount</h5>
 </div>

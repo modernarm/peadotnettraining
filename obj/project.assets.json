@@ -11,6 +11,67 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authorization/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "5.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Authorization.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authorization.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "5.0.0",
+          "Microsoft.AspNetCore.Components.Analyzers": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/5.0.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Forms/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.Forms.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Web/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Forms": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.0",
+          "Microsoft.JSInterop": "5.0.0",
+          "System.IO.Pipelines": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.Web.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/5.0.1": {
         "type": "package",
         "compile": {
@@ -96,6 +157,15 @@
         "buildMultiTargeting": {
           "buildMultiTargeting/Microsoft.AspNetCore.Identity.UI.props": {},
           "buildMultiTargeting/Microsoft.AspnetCore.Identity.UI.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Metadata.dll": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.Razor.Extensions/5.0.1": {
@@ -494,6 +564,27 @@
           }
         }
       },
+      "Microsoft.Data.Sqlite.Core/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        }
+      },
+      "Microsoft.DotNet.PlatformAbstractions/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -559,6 +650,34 @@
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Sqlite/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "5.0.1",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.0.4"
+        },
+        "compile": {
+          "lib/netstandard2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "5.0.1",
+          "Microsoft.DotNet.PlatformAbstractions": "3.1.6",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.1",
+          "Microsoft.Extensions.DependencyModel": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.SqlServer/5.0.1": {
@@ -843,6 +962,15 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
+      "Microsoft.JSInterop/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Microsoft.JSInterop.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.JSInterop.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -1027,6 +1155,26 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "ReflectionIT.Mvc.Paging/5.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0",
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/ReflectionIT.Mvc.Paging.Views.dll": {},
+          "lib/net5.0/ReflectionIT.Mvc.Paging.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/ReflectionIT.Mvc.Paging.Views.dll": {},
+          "lib/net5.0/ReflectionIT.Mvc.Paging.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1038,6 +1186,109 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4",
+          "SQLitePCLRaw.lib.e_sqlite3": "2.0.4",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.4"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/alpine-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/linux-arm/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-armel/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-armel"
+          },
+          "runtimes/linux-mips64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-mips64"
+          },
+          "runtimes/linux-musl-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x86/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x86"
+          },
+          "runtimes/osx-x64/native/libe_sqlite3.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-arm/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm"
+          },
+          "runtimes/win-arm64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -1457,6 +1708,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.IO.Pipelines/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -2205,6 +2465,86 @@
         "logo.png"
       ]
     },
+    "Microsoft.AspNetCore.Authorization/5.0.0": {
+      "sha512": "kNiUekkQZIgd0k8WJZVLpdaJSTgpwHT+gn9slPtON4FC8vGGsFWQo3Bd5wo363EJuxlOgszUNQBbpLAaFh1kFg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authorization/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net461/Microsoft.AspNetCore.Authorization.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Authorization.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
+        "microsoft.aspnetcore.authorization.5.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components/5.0.0": {
+      "sha512": "kfJF9EqJGzVgfEN15vWI+8g+ZhtlMAk9YO6G8lXKO9s1AxWv+Ct4OLOMO46PXyjPWWJ7X9gded9EFVFyxsdyjg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net5.0/Microsoft.AspNetCore.Components.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Components.xml",
+        "microsoft.aspnetcore.components.5.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.components.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/5.0.0": {
+      "sha512": "G5SP+2FO90d84XB90A1NBKJaDjhkhcv3kDumd7zughGt1tNQn92sCpBoRs51LT1M1Cp4w4cD/WHS8WB8t5ol9A==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.analyzers/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
+        "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "microsoft.aspnetcore.components.analyzers.5.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Forms/5.0.0": {
+      "sha512": "6Xdql+Sbx7XM1XjNXx6iyEmlAujTM2GFgeOdzlHip3h6g/M3D/al+K945JuFQ5HlBUQv3SL0c6Okencad6nVmA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.forms/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net5.0/Microsoft.AspNetCore.Components.Forms.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Components.Forms.xml",
+        "microsoft.aspnetcore.components.forms.5.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Web/5.0.0": {
+      "sha512": "TYnULwOuF43ITRlL02CmVoXLb1t1NSNbmUXuIrS4IMJd+HjK+sIisTRoJOr4L13LDWmOr1OM8teA04tOFf4I6w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.web/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net5.0/Microsoft.AspNetCore.Components.Web.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Components.Web.xml",
+        "microsoft.aspnetcore.components.web.5.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.1": {
       "sha512": "VGfj77RBkyWpPxvX6oSghE3DPObvg171HRdwr/t3aJQ9Y5cgaZE8BUNLhHZ0yBFa218r7e9Qou+DLGfRtve4CQ==",
       "type": "package",
@@ -2344,6 +2684,25 @@
         "staticwebassets/V4/lib/jquery/dist/jquery.js",
         "staticwebassets/V4/lib/jquery/dist/jquery.min.js",
         "staticwebassets/V4/lib/jquery/dist/jquery.min.map"
+      ]
+    },
+    "Microsoft.AspNetCore.Metadata/5.0.0": {
+      "sha512": "Gr7YSfoYYnyiQ3+se9RjiZhj2h7I9uDn0ps1kPfxGqLbC8fzpfAzb3EPbHz0sBHtw8aBE0zyckZixmAMqHJnpA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.metadata/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net461/Microsoft.AspNetCore.Metadata.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Metadata.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
+        "microsoft.aspnetcore.metadata.5.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Mvc.Razor.Extensions/5.0.1": {
@@ -2887,6 +3246,40 @@
         "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb"
       ]
     },
+    "Microsoft.Data.Sqlite.Core/5.0.1": {
+      "sha512": "coC0Lo7PgP9d7XXBd/aYik/hNWTc4cJ+fzJqPgYXNVI1OlbwdrvM5vQWwS0edWsBNnWn0+qkKPN4rTtTiKxPhg==",
+      "type": "package",
+      "path": "microsoft.data.sqlite.core/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
+        "microsoft.data.sqlite.core.5.0.1.nupkg.sha512",
+        "microsoft.data.sqlite.core.nuspec"
+      ]
+    },
+    "Microsoft.DotNet.PlatformAbstractions/3.1.6": {
+      "sha512": "jek4XYaQ/PGUwDKKhwR8K47Uh1189PFzMeLqO83mXrXQVIpARZCcfuDedH50YDTepBkfijCZN5U/vZi++erxtg==",
+      "type": "package",
+      "path": "microsoft.dotnet.platformabstractions/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+        "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+        "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+        "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.xml",
+        "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+        "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.xml",
+        "microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
+        "microsoft.dotnet.platformabstractions.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore/5.0.1": {
       "sha512": "bz4WSbLqNw9gGeHw8VAzCcX6TVDLAD/SZRii9G7XSsqAdLL2J8pVINemXfRUt5IHlC1yWC5To4PzAUWJJZCbYw==",
       "type": "package",
@@ -2956,6 +3349,33 @@
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.xml",
         "microsoft.entityframeworkcore.relational.5.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Sqlite/5.0.1": {
+      "sha512": "4HJD3Uux59E7GHARkNMsCqFh/IDTtJUR1RXeSWRPF1tK7LGD5mR//PEMP+IJakNX1Dumar3uLdtKwGk6ateLHQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.sqlite/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.1/_._",
+        "microsoft.entityframeworkcore.sqlite.5.0.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/5.0.1": {
+      "sha512": "+wuQrByixIpOHLfdpysddUel/5VE9z6+HKOYovY3wqppkOJw5/To/E4FrOmUZevrT7z9V9f6yO8cTiKGApxEhQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.sqlite.core/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Sqlite.dll",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Sqlite.xml",
+        "microsoft.entityframeworkcore.sqlite.core.5.0.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.core.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.SqlServer/5.0.1": {
@@ -3436,6 +3856,21 @@
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
         "microsoft.identitymodel.tokens.5.6.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
+      ]
+    },
+    "Microsoft.JSInterop/5.0.0": {
+      "sha512": "qhLTZMoOsAbDWwE7M+VbjxH3EuP654tclaOhi6Sf7Xh6bj6TXDO0GiNQeNPdebMClKMGELJezOwbFp1BFB+9Ug==",
+      "type": "package",
+      "path": "microsoft.jsinterop/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net5.0/Microsoft.JSInterop.dll",
+        "lib/net5.0/Microsoft.JSInterop.xml",
+        "microsoft.jsinterop.5.0.0.nupkg.sha512",
+        "microsoft.jsinterop.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
@@ -3984,6 +4419,22 @@
         "newtonsoft.json.nuspec"
       ]
     },
+    "ReflectionIT.Mvc.Paging/5.1.1": {
+      "sha512": "Y1MBZPPxlDbR3YeHqQasjydFT42lOK+nWQqYs1Ut8iWvPNcVxTQQRNnR4EQ4+bBLhqLHYV5ycKCmhu7blvRegw==",
+      "type": "package",
+      "path": "reflectionit.mvc.paging/5.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License..txt",
+        "lib/net5.0/ReflectionIT.Mvc.Paging.Views.dll",
+        "lib/net5.0/ReflectionIT.Mvc.Paging.Views.pdb",
+        "lib/net5.0/ReflectionIT.Mvc.Paging.dll",
+        "lib/net5.0/ReflectionIT.Mvc.Paging.pdb",
+        "reflectionit.mvc.paging.5.1.1.nupkg.sha512",
+        "reflectionit.mvc.paging.nuspec"
+      ]
+    },
     "runtime.native.System/4.3.0": {
       "sha512": "c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
       "type": "package",
@@ -3996,6 +4447,79 @@
         "lib/netstandard1.0/_._",
         "runtime.native.system.4.3.0.nupkg.sha512",
         "runtime.native.system.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.bundle_e_sqlite3/2.0.4": {
+      "sha512": "f5U8Sw0lRym8tTraJ2zm6OqcDrcrEVvcKDtYlKSLs3Ox9SerkwkPXiFXb/uiW0g2tJdUw6oBhsxI/l5DoRxXMg==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_e_sqlite3/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.tvOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
+        "sqlitepclraw.bundle_e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/2.0.4": {
+      "sha512": "4XlDZpDAsboMD6qZQcz9AaKblKDUTVHF+8f3lvbP7QjoqSRr2Xc0Lm34IK2pjRIYnyFLhI3yOJ5YWfOiCid2yg==",
+      "type": "package",
+      "path": "sqlitepclraw.core/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.2.0.4.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.lib.e_sqlite3/2.0.4": {
+      "sha512": "oetvmtDZOE4Nnrtxd8Trapl9geBiu0rDCUXff46qGYjnUwzaU1mZ3OHnfR402tl32rx8gBWg3n5OBRaPJRbsGw==",
+      "type": "package",
+      "path": "sqlitepclraw.lib.e_sqlite3/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net461/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "lib/net461/_._",
+        "lib/netstandard2.0/_._",
+        "runtimes/alpine-x64/native/libe_sqlite3.so",
+        "runtimes/linux-arm/native/libe_sqlite3.so",
+        "runtimes/linux-arm64/native/libe_sqlite3.so",
+        "runtimes/linux-armel/native/libe_sqlite3.so",
+        "runtimes/linux-mips64/native/libe_sqlite3.so",
+        "runtimes/linux-musl-x64/native/libe_sqlite3.so",
+        "runtimes/linux-x64/native/libe_sqlite3.so",
+        "runtimes/linux-x86/native/libe_sqlite3.so",
+        "runtimes/osx-x64/native/libe_sqlite3.dylib",
+        "runtimes/win-arm/native/e_sqlite3.dll",
+        "runtimes/win-arm64/native/e_sqlite3.dll",
+        "runtimes/win-x64/native/e_sqlite3.dll",
+        "runtimes/win-x86/native/e_sqlite3.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/e_sqlite3.dll",
+        "sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.dynamic_cdecl/2.0.4": {
+      "sha512": "AY6+vv/4ji1mCkLrS6HP/88rHT9YFKRyg3LUj8RyIk6imJMUFdQDiP8rK8gq0a/0FbqspLjK1t7rtKcr7FXRYA==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.dynamic_cdecl/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll",
+        "sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+        "sqlitepclraw.provider.dynamic_cdecl.nuspec"
       ]
     },
     "System.Collections/4.3.0": {
@@ -5158,6 +5682,32 @@
         "ref/xamarinwatchos10/_._",
         "system.io.filesystem.primitives.4.3.0.nupkg.sha512",
         "system.io.filesystem.primitives.nuspec"
+      ]
+    },
+    "System.IO.Pipelines/5.0.0": {
+      "sha512": "irMYm3vhVgRsYvHTU5b2gsT2CwT/SMM6LZFzuJjpIvT5Z4CshxNsaoBC1X/LltwuR3Opp8d6jOS/60WwOb7Q2Q==",
+      "type": "package",
+      "path": "system.io.pipelines/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
+        "lib/netcoreapp3.0/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.0/System.IO.Pipelines.xml",
+        "lib/netstandard1.3/System.IO.Pipelines.dll",
+        "lib/netstandard1.3/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "ref/netcoreapp2.0/System.IO.Pipelines.dll",
+        "ref/netcoreapp2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.5.0.0.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Linq/4.3.0": {
@@ -7589,8 +8139,10 @@
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.1",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.1",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.1",
+      "ReflectionIT.Mvc.Paging >= 5.1.1"
     ]
   },
   "packageFolders": {
@@ -7658,6 +8210,10 @@
             "target": "Package",
             "version": "[5.0.1, )"
           },
+          "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[5.0.1, )"
+          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "[5.0.1, )"
@@ -7665,6 +8221,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[5.0.1, )"
+          },
+          "ReflectionIT.Mvc.Paging": {
+            "target": "Package",
+            "version": "[5.1.1, )"
           }
         },
         "imports": [
